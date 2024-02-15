@@ -1,65 +1,55 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet"  href="css/styles.css">
+        <title>Konverter Suhu</title>
     </head>
+
     <body>
+        <header>
+            <h1 id="big-header">Konverter Suhu</h1>
+        </header>
+        
+        <main>
+            <div id="technical">
+                <div id="first-container">
+                    <select name="temperature-unit" class="temperature-unit">
+                        <option value="kelvin">Kelvin</option> 
+                        <option value="celsius">Celsius</option> 
+                        <option value="fahrenheit">Fahrenheit</option> 
+                        <option value="reamur">Reamur</option> 
+                    </select>
+                    <input class='temperature-value' type="number" placeholder="0">
+                </div>
 
+                <div id="third-container">
+                    to
+                </div>
+
+                <div id="second-container">
+                    <select name="temperature-unit" class="temperature-unit">
+                        <option value="kelvin">Kelvin</option> 
+                        <option value="celsius">Celsius</option> 
+                        <option value="fahrenheit">Fahrenheit</option> 
+                        <option value="reamur">Reamur</option> 
+                    </select>
+                    <div class='temperature-result'>0</div>
+                </div>
+            </div>
+
+            <div id="explanatory">
+                <h2>Conversion from Celsius to Fahrenheit</h2> 
+                <p> Suhu S dalam derajat Fahrenheit (&deg;F) sama dengan suhu S dalam derajat Celsius (&deg;C) kali 9/5 tambah 32. 
+                    <br> 
+                    S(&deg;F) = (SC) * 9/5 ) + 32 atau S(&deg;F) = (SC) 1.8 ) + 32 
+                </p>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2023 Konverter Suhu. All rights reserved.
+        </footer>
     </body>
-</html> -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Converter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-        }
-        input[type="number"] {
-            width: 50%;
-            padding: 10px;
-            margin-bottom: 20px;
-        }
-        button {
-            padding: 10px 30px;
-            background-color: blue;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        #result {
-            margin: 20px 0;
-            font-size: 1.2rem;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <input type="number" id="celsius" placeholder="Celsius (°C)">
-        <button onclick="convert()">Convert</button>
-        <div id="result"></div>
-    </div>
-
-    <script>
-        function convert() {
-            const celsiusInput = document.getElementById("celsius");
-            const celsius = parseFloat(celsiusInput.value);
-            const fahrenheit = (celsius * 9/5) + 32;
-            const resultElement = document.getElementById("result");
-
-            resultElement.innerHTML = `Fahrenheit (°F): ${fahrenheit.toFixed(2)}`;
-        }
-    </script>
-</body>
 </html>
